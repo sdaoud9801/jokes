@@ -3,7 +3,7 @@ import validate from './validate.js';
 import postDetails from './postDetails.js';
 import './Signup.css';
 
-const Signup = () => {
+const Signup = ({setPage}) => {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -25,12 +25,21 @@ const Signup = () => {
             setIsLoading(true);
             try {
                 let response = await postDetails(username, password, email);
-                response = await response.json();
-                console.log(response);
+                setIsLoading(false);
+                if(response.status === "success") {
+                    setSuccess(true);
+                    setTimeout(()=>{
+                        setPage('login');
+                    },2000);
+                } else {
+                    setError({
+                        message: response.error
+                    });
+                }
             } catch (e) {
                 setIsLoading(false);
                 setError({
-                    message: "Problem sending sign up details"
+                    message: e.message
                 })
             }
             

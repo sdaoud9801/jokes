@@ -1,5 +1,5 @@
 import './Login.css';
-const Login = () => {
+const Login = ({setPage}) => {
     return (
         <div className="form__container">
             <form>
@@ -8,13 +8,16 @@ const Login = () => {
                 </div>
                 <div className="form__field">
                     <label htmlFor='username'>Username</label>
-                    <input type="text" placeholder='eg ultimateIce' id="username"></input>
+                    <input type="text" placeholder='eg ultimateIce' id="username" required></input>
                 </div>
                 <div className="form__field">
                     <label htmlFor='password'>Password</label>
-                    <input type="password" placeholder='******' id="password"></input>
+                    <input type="password" placeholder='******' id="password" required></input>
                 </div>
-                <input type="submit" value="SUBMIT" id="submit"></input>
+                <input type="submit" value="SUBMIT" className="form__submit"></input>
+                <p className="sign-up">
+                    Don't have an account? <span className='clickable' onClick={()=>{setPage("signup")}}>Sign up</span>
+                </p>
             </form>
         </div>
     )

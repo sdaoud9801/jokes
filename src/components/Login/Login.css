@@ -1,7 +1,8 @@
 form {
     background-color: white;
-    padding: 30px 20px;
+    padding: 10px 20px;
     width: 80%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -17,17 +18,43 @@ form {
     width: 100%;
 }
 
+.form__header-container h2 {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin: 0px;
+}
+
 .form__field {
     width: 100%;
 }
 
-form h2 {
-    text-decoration: underline;
-    margin: 0px;
+.form__field input {
+    padding: 0.3rem;
+    color: black;
 }
 
 .form__field {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+}
+
+.form__submit {
+    background-color: #FA812F;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 2px solid ;
+    outline: none;
+}
+
+.sign-up {
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.clickable {
+    color: #0F8FFF;
+    font-size: 0.9rem;
+    text-decoration: underline;
 }

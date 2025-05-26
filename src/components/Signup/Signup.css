@@ -1,0 +1,69 @@
+.invalid {
+    border: 2px solid red;
+}
+
+.invalid:focus {
+    outline: none;
+    border: 3px solid red;
+}
+
+.valid {
+    border: 2px solid green;
+}
+
+.hide {
+    display: none;
+}
+
+.valid:focus {
+    outline: none;
+    border: 2px solid green;
+}
+
+.field__error {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.message {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.loading {
+    color: black;
+    background-color: grey;
+}
+
+.success {
+    background-color: lightgreen;
+    color: green;
+}
+
+.error {
+    background-color: #ffa1a4;
+    color: #ff3030;
+}
+
+.loader {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid green;
+    animation: spin 2s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

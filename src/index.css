@@ -6,21 +6,39 @@
   font-style: normal;
 }
 
+.jua-light {
+  font-family: "Jua", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
 .fontdiner-swanky-regular {
   font-family: "Fontdiner Swanky", serif;
   font-weight: 400;
   font-style: normal;
 }
 
+html {
+  font-size: 18px;
+}
+
 * {
     font-family: "Jua";
     box-sizing: border-box;
     color: #FA812F;
-    font-size: 18px;
+    font-size: 1rem;
 }
+
+
 body {
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
     background-color: #FEF3E2;
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 20px;
+  }
 }

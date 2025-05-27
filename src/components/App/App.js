@@ -6,7 +6,8 @@ import { useState } from 'react';
 
 
 function App() {
-  const [page, setPage] = useState("login");
+  const [page, setPage] = useState("jokes");
+
   if (page === "login") {
     return (
       <div className="App">
@@ -21,6 +22,13 @@ function App() {
         <Signup setPage={setPage}/>
       </div>
       )
+  } else if (page === "jokes") {
+    return (
+      <div className="App">
+        <Nav />
+        <Jokes />
+      </div>
+    )
   }
 
 }

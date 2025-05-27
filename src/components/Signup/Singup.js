@@ -10,9 +10,7 @@ const Signup = ({setPage}) => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [error, setError] = useState(false);
-
-
+    const [error, setError] = useState(false);  
 
     let { emailValid, usernameValid, passwordValid, confirmPasswordValid } = validate(email, username, password, confirmPassword);
     let allValid = emailValid && usernameValid && passwordValid && confirmPasswordValid;

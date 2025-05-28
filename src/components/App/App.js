@@ -2,6 +2,7 @@ import './App.css';
 import Nav from '../Nav/Nav.js';
 import Login from '../Login/Login.js';
 import Signup from '../Signup/Singup.js';
+import Jokes from '../Jokes/Jokes.js';
 import { useState } from 'react';
 
 

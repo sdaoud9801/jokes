@@ -1,0 +1,20 @@
+.jokes-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.jokes  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-feed {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+}

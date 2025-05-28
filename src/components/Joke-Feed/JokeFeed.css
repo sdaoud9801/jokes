@@ -1,0 +1,22 @@
+.jokes-feed {
+    width: 100%;
+}
+
+.jokes-feed__header {
+    background-color: #FA812F;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.jokes-feed__sort {
+    padding: 10px 10px;
+}
+
+select[name="sortby"] {
+    margin-left: 10px;
+}

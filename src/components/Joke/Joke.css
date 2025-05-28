@@ -1,0 +1,38 @@
+.joke {
+    background-color: white;
+}
+
+.joke__header {
+    background-color: #FA812F;
+    color: white;
+    padding: 10px;
+}
+
+.joke__content {
+    padding: 10px;
+}
+
+.joke__interact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+.joke__interact > button {
+    border: 2px solid #FA812F;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.joke__interact > button:hover {
+    border: 3px solid #FA812F;
+    font-size: 1.1rem;
+}
+
+.joke__date {
+    padding: 5px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

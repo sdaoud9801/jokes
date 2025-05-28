@@ -1,0 +1,23 @@
+.joke-form {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;    
+}
+
+.joke-form > textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    min-height: 200px;
+    color: black;
+    resize: none;
+}
+
+.joke-form > input[type="submit"]{
+    background-color: transparent;
+    border: 2px solid #FA812F;
+    border-radius: 3px;
+}

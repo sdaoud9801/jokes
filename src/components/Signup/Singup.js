@@ -74,7 +74,7 @@ const Signup = ({setPage}) => {
                     <input type="password" placeholder='******' id="confirm-password" className={confirmPasswordValid ? ('valid') : ('invalid')} onChange={(e) => { setConfirmPassword(e.target.value) }} required></input>
                     <div className={confirmPasswordValid ? ("hide") : ("field__error")}>Passwords must match</div>
                 </div>
-                <input type="submit" value="SUBMIT" className="form__submit" onClick={(e) => { submit(e) }}></input>
+                <input type="" value="SUBMIT" className="form__submit" onClick={(e) => { submit(e) }}></input>
                 <div className={isLoading ? "loading message" : "hide"}>
                     Creating your account <div className="loader"></div>
                 </div>

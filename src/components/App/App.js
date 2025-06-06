@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 
 function App() {
-  const [page, setPage] = useState("jokes");
+  const [page, setPage] = useState("login");
 
   if (page === "login") {
     return (
@@ -20,18 +20,17 @@ function App() {
       return(
       <div className="App">
         <Nav />
-        <Signup setPage={setPage}/>
+        <Signup setPage={setPage} />
       </div>
       )
   } else if (page === "jokes") {
     return (
       <div className="App">
         <Nav />
-        <Jokes />
+        <Jokes setPage={setPage} />
       </div>
     )
   }
-
 }
 
 export default App;

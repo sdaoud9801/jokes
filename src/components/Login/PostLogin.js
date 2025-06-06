@@ -1,9 +1,10 @@
 async function postLogin(username,password){
-    let response = await fetch("http://localhost:5000/auth/login",{
+    let response = await fetch("http://localhost:5000/auth/login", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify({
                 username,
                 password
@@ -11,7 +12,6 @@ async function postLogin(username,password){
         }
     )
     response = await response.json();
-    console.log(response);
     return response;
 }
 

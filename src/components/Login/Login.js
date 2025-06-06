@@ -3,8 +3,8 @@ import postLogin from './PostLogin.js';
 import validateInputs from './validateInputs.js';
 import { useState } from 'react';
 const Login = ({setPage}) => {
-    let [username,setUsername] = useState('');
-    let [password,setPassword] = useState('');
+    const [username,setUsername] = useState('');
+    const [password,setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
@@ -20,10 +20,13 @@ const Login = ({setPage}) => {
             return
         } else {
             setIsLoading(true);
-            let {status,message} = await postLogin(username,password);
+            let {status, message} = await postLogin(username,password);
             setIsLoading(false);
             if(status === "success"){
                 setSuccess(true);
+                setTimeout(()=>{
+                    setPage("jokes")
+                },1000)
             } else {
                 setError({
                     message
@@ -47,7 +50,7 @@ const Login = ({setPage}) => {
                 </div>
                 <input type="submit" value="SUBMIT" className="form__submit" onClick={(e)=>{submit(e)}}></input>
                 <div className={isLoading ? "loading message" : "hide"}>
-                    Creating your account <div className="loader"></div>
+                    Logging you in<div className="loader"></div>
                 </div>
                 <div className={success ? "success message" : "hide"}>
                     Successfully logged in!

@@ -6,7 +6,6 @@ export default function sortJokes(jokes, sortBy) {
             return sortByMostPopular(jokes);
         }
     } else {
-        console.log("no joke")
     }
 };
 

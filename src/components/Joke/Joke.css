@@ -34,6 +34,7 @@
 .joke__interact > button:hover {
     border: 3px solid #FA812F;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .joke__date {

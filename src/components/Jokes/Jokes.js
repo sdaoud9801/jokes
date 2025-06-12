@@ -17,7 +17,7 @@ const Jokes = ({setPage}) => {
         <div className="jokes-container">
             <div className="main-feed">
                 <JokeForm setPage={setPage} updateJokes={updateJokes} />
-                <JokeFeed setPage={setPage} jokes={jokes}  />
+                <JokeFeed setPage={setPage} jokes={jokes} setJokes={setJokes} />
             </div>
         </div>
     )

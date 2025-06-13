@@ -21,13 +21,13 @@ const Login = ({ setPage, setUser }) => {
         } else {
             try {
                 setIsLoading(true);
+                cookieStore.addEventListener("change", (event)=>{
+                        console.log(event);
+                    });
                 let { status, message } = await postLogin(username, password);
                 setIsLoading(false);
                 if (status === "success") {
                     setSuccess(true);
-                    cookieStore.addEventListener("change", (event)=>{
-                        console.log(event);
-                    })
                     setTimeout(() => {
                         setUser(username)
                         setPage("jokes")

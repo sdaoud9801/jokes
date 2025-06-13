@@ -28,6 +28,7 @@ const Login = ({ setPage, setUser }) => {
                     setTimeout(() => {
                         setUser(username)
                         setPage("jokes")
+                        console.log(document.cookie);
                     }, 1000)
                 } else {
                     setError({

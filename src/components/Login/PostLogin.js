@@ -1,5 +1,5 @@
 async function postLogin(username,password){
-    let response = await fetch("http://localhost:5000/auth/login", {
+    let response = await fetch("https://jokes-server-2xec.onrender.com/auth/login", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"

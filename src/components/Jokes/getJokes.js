@@ -1,5 +1,5 @@
 async function getJokes(){
-    let response = await fetch("http://localhost:5000/jokes",{
+    let response = await fetch("https://jokes-server-2xec.onrender.com/jokes",{
         credentials: "include"
     });
     response = await response.json();

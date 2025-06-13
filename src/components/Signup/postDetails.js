@@ -1,5 +1,5 @@
 async function postDetails(username, password, email) {
-    let response = await fetch("http://localhost:5000/auth/createuser", {
+    let response = await fetch("https://jokes-server-2xec.onrender.com/auth/createuser", {
         method: "post",
         headers: {
             "Content-Type": "application/json"

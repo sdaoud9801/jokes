@@ -1,5 +1,5 @@
 async function postJoke(content) {
-    let response = await fetch("http://localhost:5000/jokes/createjoke", {
+    let response = await fetch("https://jokes-server-2xec.onrender.com/jokes/createjoke", {
         method: "post",
         credentials: "include",
         headers: {

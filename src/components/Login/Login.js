@@ -21,9 +21,6 @@ const Login = ({ setPage, setUser }) => {
         } else {
             try {
                 setIsLoading(true);
-                CookieStore.addEventListener("change", (event)=>{
-                        console.log(event);
-                    });
                 let { status, message } = await postLogin(username, password);
                 setIsLoading(false);
                 if (status === "success") {
@@ -31,7 +28,6 @@ const Login = ({ setPage, setUser }) => {
                     setTimeout(() => {
                         setUser(username)
                         setPage("jokes")
-                        console.log(document.cookie);
                     }, 1000)
                 } else {
                     setError({

@@ -8,12 +8,13 @@ import { useState } from 'react';
 
 function App() {
   const [page, setPage] = useState("login");
+  const [user, setUser] = useState(null)
 
   if (page === "login") {
     return (
       <div className="App">
         <Nav />
-        <Login setPage={setPage} />
+        <Login setPage={setPage} setUser={setUser} />
       </div>
     );
   } else if (page === "signup") {
@@ -27,7 +28,7 @@ function App() {
     return (
       <div className="App">
         <Nav />
-        <Jokes setPage={setPage} />
+        <Jokes setPage={setPage} user={user} />
       </div>
     )
   }

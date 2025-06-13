@@ -17,6 +17,7 @@ function sortByNewest(jokes) {
     let sortedJokes = jokesIds.map((id) => {
         return jokes.find((joke) => joke.joke_id === id);
     });
+    console.log(sortedJokes);
     return sortedJokes;
 }
 

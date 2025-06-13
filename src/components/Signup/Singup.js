@@ -19,6 +19,9 @@ const Signup = ({setPage}) => {
         e.preventDefault();
         setSuccess(false);
         setError(false);
+        if(isLoading) {
+            return
+        }
         if (allValid) {
             setIsLoading(true);
             try {
@@ -74,7 +77,7 @@ const Signup = ({setPage}) => {
                     <input type="password" placeholder='******' id="confirm-password" className={confirmPasswordValid ? ('valid') : ('invalid')} onChange={(e) => { setConfirmPassword(e.target.value) }} required></input>
                     <div className={confirmPasswordValid ? ("hide") : ("field__error")}>Passwords must match</div>
                 </div>
-                <input type="" value="SUBMIT" className="form__submit" onClick={(e) => { submit(e) }}></input>
+                <button type="" value="SUBMIT" className="form__submit" onClick={(e) => { submit(e) }}>SUBMIT</button>
                 <div className={isLoading ? "loading message" : "hide"}>
                     Creating your account <div className="loader"></div>
                 </div>

@@ -2,16 +2,25 @@ import './Jokes.css';
 import JokeForm from '../Joke-Form/JokeForm.js';
 import JokeFeed from '../Joke-Feed/JokeFeed.js';
 import getJokes from './getJokes.js';
-import { useState } from 'react';
+import formatDates from './formatDates.js';
+import { useState, useEffect } from 'react';
 
-const Jokes = ({setPage}) => {
+const Jokes = ({ setPage, user }) => {
     const [jokes, setJokes] = useState(false);
-    async function updateJokes(){
-        let response = await getJokes();
-        setJokes(response.jokes);
-    };
-    if (!jokes) {
-        updateJokes();
+    console.log("username:",user);
+    useEffect(()=>{
+        updateJokes()
+        console.log("ran update jokes");
+    },[user])
+    async function updateJokes() {
+        try {
+            let response = await getJokes();
+            let { jokes } = response;
+            let formattedJokes = formatDates(jokes);
+            setJokes(formattedJokes);
+        } catch (e) {
+            console.log(e)
+        }
     };
     return (
         <div className="jokes-container">

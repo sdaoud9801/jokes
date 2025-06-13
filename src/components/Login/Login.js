@@ -21,7 +21,7 @@ const Login = ({ setPage, setUser }) => {
         } else {
             try {
                 setIsLoading(true);
-                cookieStore.addEventListener("change", (event)=>{
+                CookieStore.addEventListener("change", (event)=>{
                         console.log(event);
                     });
                 let { status, message } = await postLogin(username, password);

@@ -8,7 +8,7 @@ const Joke = ({ joke, editJokesArray }) => {
     }
     async function like() {
         setIsLoading(true);
-        let response = await fetch("https://localhost:5000/jokes/like", {
+        let response = await fetch("https://jokes-server-2xec.onrender.com/jokes/like", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

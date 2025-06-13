@@ -25,6 +25,9 @@ const Login = ({ setPage, setUser }) => {
                 setIsLoading(false);
                 if (status === "success") {
                     setSuccess(true);
+                    cookieStore.addEventListener("change", (event)=>{
+                        console.log(event);
+                    })
                     setTimeout(() => {
                         setUser(username)
                         setPage("jokes")

@@ -3,7 +3,6 @@ async function getJokes(){
         credentials: "include"
     });
     response = await response.json();
-    console.log(response);
     return response
 }
 
